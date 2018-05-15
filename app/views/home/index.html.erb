@@ -1,0 +1,19 @@
+<% @every_post.each do |p| %>
+    게시글 번호 : <%= p.id %> 번
+    <br>제목 : <%= p.title %>
+    <br>내용 : <%= p.content %>
+    <br>등록일 : <%= p.created_at %>
+    
+    <%= link_to update_path(p) do %>
+    <br><br><button>수정</button>
+    <% end %>
+    
+    <%= link_to destroy_path(p) do %>
+    <button>삭제</button>
+    <% end %>
+    <hr>
+    <% end %>
+<br>
+<a href="write">
+    <button>글쓰러 가기</button>
+    </a>
